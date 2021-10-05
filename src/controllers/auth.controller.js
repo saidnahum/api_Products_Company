@@ -31,7 +31,6 @@ export const register = async (req, res) => {
    res.status(200).json({token})
 
    await newUser.save()
-   res.json("register")
 }
 
 export const login = async (req, res) => {
