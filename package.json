@@ -1,7 +1,7 @@
 {
   "name": "products-api-company",
   "version": "1.0.0",
-  "description": "",
+  "description": "Api para compañías",
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
@@ -9,7 +9,7 @@
     "start": "node build/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Said",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
