@@ -4,10 +4,13 @@ const router = Router();
 // Importando todos los métodos del products.controller
 import * as productsController from '../controllers/products.controller';
 
+// Importando middlewares
+import { verifyToken } from '../middlewares';
+
 router.get('/', productsController.getProducts);
-router.post('/', productsController.createProduct);
+router.post('/', verifyToken, productsController.createProduct);
 router.get('/:productId', productsController.getProductById);
-router.put('/:productId', productsController.updateProductById);
-router.delete('/:productId', productsController.deleteProductById);
+router.put('/:productId', verifyToken, productsController.updateProductById);
+router.delete('/:productId', verifyToken, productsController.deleteProductById);
 
 export default router;
